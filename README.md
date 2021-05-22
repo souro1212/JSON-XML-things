@@ -1,2 +1,2 @@
 # JSON-XML-things
-Validate , format and convert JSON &amp; XML locally 
+Validate, format and convert JSON &amp; XML locally 
