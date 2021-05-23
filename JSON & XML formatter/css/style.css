@@ -50,7 +50,10 @@ textarea {
 }
 
 .footerLeft{
-    float: right !important;
+    /*float: right !important;*/
+    position: fixed !important;
+    bottom: 10px !important;
+    right: 5px !important;
 }
 
 .creditsText{
