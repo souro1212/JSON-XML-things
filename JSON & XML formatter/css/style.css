@@ -54,6 +54,7 @@ textarea {
     position: fixed !important;
     bottom: 10px !important;
     right: 5px !important;
+    z-index: 99;
 }
 
 .creditsText{
@@ -110,4 +111,14 @@ textarea {
 
 .xmlJsonDropdownHeader{
     display: inline-flex !important;
+}
+
+.centerAligned{
+    text-align: center !important;
+}
+
+#swaggerUiEmbed{
+    width: 100% !important;
+    min-height: 100em;
+    overflow-y: visible;
 }

@@ -61,5 +61,16 @@ function loadJsonXmlPage(){
     $("#mainLoader").load("jsonXml.html");
 }
 
+//load SwaggerUI
+function loadSwaggerUI(){
+    $("#mainLoader").load("swaggerui.html");
+}
+
+//open credits modal
+function openCreditsModal(){
+    $("#creditsModal").modal('show');
+}
+
+
 
 
