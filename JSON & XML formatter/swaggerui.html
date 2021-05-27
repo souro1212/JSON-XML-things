@@ -3,9 +3,44 @@
 
 <div class="ui stackable grid">
     <div class="sixteen wide column">
-        <h1>The embed element</h1>
+        <h2 class="ui inverted header">
+            <img class="ui image" src="pic/swagger.svg">
+            <div class="content">Swagger UI</div>
+        </h2>
+    </div>
+
+    <div class="sixteen wide column">   
+        <!--<b class="fileUploadLabel">Upload a YAML/JSON file:  </b>-->
+        <div class="ui blue message infoMessagebackground">
+            <div class="header">
+              About the Uploaded File
+            </div>
+            <p>Your uploaded file is stored in your browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">local storage</a>
+            . You can clear the data by clicking <a href="#clear" onclick="deleteSwaggerUI()">here</a>.</p>
+        </div>
         <div class="ui inverted segment">
-            <embed type="text/html" src="swaggerui/index.html"  id="swaggerUiEmbed" />
+            <input type="file" class="inputfile" id="swaggerFileInput" accept=".yaml, .json" />
+            <label for="swaggerFileInput" class="ui inverted fluid button">
+                <i class="ui upload icon"></i> Upload a YAML/JSON file
+            </label>
+            <div class="ui horizontal inverted divider">Or</div>
+            <div class="ui fluid action inverted input">
+                <input type="text" placeholder="https://example.com/v2/swagger.json" id="swaggerUrl" autocomplete="off">
+                <div class="ui inverted button" onclick="getSwaggerUrl()">Explore</div>
+            </div> 
+        </div>
+        
+
+    </div>
+
+    <div class="sixteen wide column" >
+        <div class="ui inverted segment" id="swaggerUISegment">
+            <div class="ui small basic inverted icon buttons swaggerUITools">
+                <a class="ui button" href="swaggerui/index.html" title="Open in new tab" target="_blank"><i class="external alternate icon"></i></a>
+                <a class="ui button" onclick="deleteSwaggerUI()" title="Close Swagger UI & delete the file from your browser 'localStorage'"><i class="trash alternate outline icon"></i></a>
+            </div>
+            <br><br><br>
+            <embed type="text/html" src=""  id="swaggerUiEmbed" />
         </div>
     </div>
 </div>

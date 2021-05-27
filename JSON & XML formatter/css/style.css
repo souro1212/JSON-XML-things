@@ -100,6 +100,10 @@ textarea {
     background-color: rgb(100 232 150 / 9%) !important;
 }
 
+.infoMessagebackground{
+    background-color: rgb(8 120 247 / 6%) !important;
+}
+
 .landingPageCards{
     width: 100%;
 }
@@ -122,3 +126,52 @@ textarea {
     min-height: 100em;
     overflow-y: visible;
 }
+
+/* Scrollbar style */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  } 
+  /* Scrollbar style end*/
+
+  .grid.container {
+    margin-top: 5em;
+  }
+  .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+  }
+
+  #swaggerUISegment{
+      min-height: 20em;
+      display: none;
+  }
+
+  .fileUploadLabel{
+      vertical-align: initial;
+      margin-right: 2em;
+  }
+
+  .swaggerUITools{
+    float: right;
+    margin-bottom: 2em !important;
+  }
