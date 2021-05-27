@@ -27,8 +27,8 @@ function changeCardImage(obj){
         $(obj).find("img").attr("src","pic/xml-high.svg");
     }else if($(obj).hasClass("convertClass")){
         $(obj).find("img").attr("src","pic/convert-high.svg");
-    }else if($(obj).hasClass("convertInvClass")){
-        $(obj).find("img").attr("src","pic/convert-inv-high.svg");
+    }else if($(obj).hasClass("swaggerClass")){
+        $(obj).find("img").attr("src","pic/swagger-high.svg");
     }else{
         $(obj).find("img").attr("src","pic/home-high.svg");
     }
@@ -42,8 +42,8 @@ function changeImageBack(obj){
         $(obj).find("img").attr("src","pic/xml.svg");
     }else if($(obj).hasClass("convertClass")){
         $(obj).find("img").attr("src","pic/convert.svg");
-    }else if($(obj).hasClass("convertInvClass")){
-        $(obj).find("img").attr("src","pic/convert-inv.svg");
+    }else if($(obj).hasClass("swaggerClass")){
+        $(obj).find("img").attr("src","pic/swagger.svg");
     }else{
         $(obj).find("img").attr("src","pic/home.svg");
     }
@@ -60,6 +60,17 @@ function loadXmlPage(){
 function loadJsonXmlPage(){
     $("#mainLoader").load("jsonXml.html");
 }
+
+//load SwaggerUI
+function loadSwaggerUI(){
+    $("#mainLoader").load("swaggerui.html");
+}
+
+//open credits modal
+function openCreditsModal(){
+    $("#creditsModal").modal('show');
+}
+
 
 
 
