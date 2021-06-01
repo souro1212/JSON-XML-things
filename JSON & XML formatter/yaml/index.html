@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="yaml/codemirror.css">
+<link rel="stylesheet" href="yaml/demo.css">
+<script src="yaml/demo.js"></script>
+
+<div class="ui stackable four column grid">
+    <div class="sixteen wide column">
+      <h2 class="ui inverted header">
+          <img class="ui image" src="pic/convert.svg">
+          <div class="content">YAML<i class="exchange icon"></i>JSON</div>
+          <a href="#" id="permalink">permalink</a>
+      </h2>
+  </div>
+  <div class="sixteen wide column" id="yamlMessage">
+    <div class="ui blue message infoMessagebackground">
+      <div class="header">
+        Note
+      </div>
+      <p>Start typing or paste the yaml file to convert. </p>
+    
+    </div>
+  </div>
+ 
+  <div class="sixteen wide column">
+      <div class="ui inverted segment">
+          <h5>YAML Input</h5>
+          <textarea  width=60 id="source" class="textareaInput">---
+            type: object
+            required:
+              - id
+              - name
+            properties:
+              id:
+                type: integer
+                format: int64
+              name:
+                type: string
+              tag:
+                type: string
+          </textarea>
+      </div>
+      
+  </div>
+  <div class="sixteen wide column">
+      <!--<div class="ui labeled icon teal small button" onclick="convertYamlFunction()">
+          <i class="check icon"></i>Process YAML
+      </div>
+      <button class="ui teal basic small button" id="clearYamlField">Clear</button>-->
+  </div>
+  
+  <div class="sixteen wide column">
+      <div class="ui inverted segment">
+          <h5>JSON Output</h5>
+          <textarea class="textareaInput" id="result" height=100 width=60></textarea>
+      </div>
+      
+  </div>
+</div>
+
+    
+
