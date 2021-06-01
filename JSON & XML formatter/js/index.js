@@ -71,6 +71,11 @@ function openCreditsModal(){
     $("#creditsModal").modal('show');
 }
 
+//load Yaml To Json
+function loadYamlToJson(){
+    $("#mainLoader").load("yaml/index.html");
+}
+
 
 
 
