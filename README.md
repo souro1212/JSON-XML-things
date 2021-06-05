@@ -8,7 +8,7 @@ JSON-XML Things is a validator, reformatter and converter for JSON & XML, this j
 Copy and paste or directly type and let JSON-XML Things tidy and validate your messy JSON/XML code. 
 
 
-You can test the project online [here](https://s3.ap-south-1.amazonaws.com/souradipghosh.in/JSON+%26+XML+formatter/index.html) or download the project and run it on your system.  
+You can test the project online [here](http://souradipghosh.in/JSON%20&%20XML%20formatter/) or download the project and run it on your system.  
 
 ### Built With
 
@@ -74,7 +74,7 @@ Your Name - [Souradip Ghosh](https://www.linkedin.com/in/souradip-ghosh/) - sour
 
 Project Link: [https://github.com/souro1212/JSON-XML-things](https://github.com/souro1212/JSON-XML-things)
 
-Online Demo:  [Click here](https://s3.ap-south-1.amazonaws.com/souradipghosh.in/JSON+%26+XML+formatter/index.html)
+Online Demo:  [Click here](http://souradipghosh.in/JSON%20&%20XML%20formatter/)
 
 
 
