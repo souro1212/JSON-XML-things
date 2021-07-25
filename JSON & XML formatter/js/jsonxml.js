@@ -12,16 +12,22 @@ function jsonXmlProcess(){
     if(convertTo === "xml to json"){
         var parser = new DOMParser();
         outputVal = parser.parseFromString(jsonXMLVal,"text/xml");
-        console.log(outputVal);
+       // console.log(outputVal);
         var find = $(outputVal).find("parsererror").length;
         if(find == 0){
-            outputVal = xml2json(outputVal);
-            console.log(outputVal);
-            outputVal = outputVal.replace("undefined", '');
-            console.log(outputVal);
-        
-            var editor = new JsonEditor('#jsonXMLOutput', getJson());
-            editor.load(getJson(outputVal));
+            
+            outputVal = xml2json(jsonXMLVal, {compact: false, spaces: 4});
+            //outputVal = outputVal.replace("undefined", '');
+            
+            $("#jsonXMLOutput").removeClass("language-html").addClass("language-json");
+            outputVal = hljs.highlight(outputVal, {language: 'json'});
+            $("#jsonXMLOutput").html(outputVal.value);
+            document.querySelectorAll('#jsonXMLOutput').forEach((el) => {
+               hljs.highlightElement(el);
+            }); 
+
+            $("#jsonXmlMessage").html('<div class="ui positive message transition successMessagebackground">Valid XML</div>');
+           
         }else{
             $("#jsonXmlMessage").html('<div class="ui negative message transition errorMessagebackground">Invalid XML</div>');
         }
@@ -29,26 +35,31 @@ function jsonXmlProcess(){
 
     }else{
         try {  
+           // console.log("hi")
             outputVal = JSON.parse(jsonXMLVal);
-            console.log(outputVal);
-            outputVal = json2xml(outputVal);
-            console.log(outputVal);
-       
+           // console.log(outputVal);
+            
+            outputVal = json2xml(outputVal, {compact: true, spaces: 4});
+            //outputVal = json2xml(outputVal);
+            // console.log(outputVal);
         
             $("#jsonXMLOutput").empty();
-            $("#jsonXMLOutput").simpleXML({ xmlString: outputVal });
+            $("#jsonXMLOutput").addClass("language-html").removeClass("language-json");
+            outputVal = hljs.highlight(outputVal, {language: 'xml'});
+          // console.log(outputVal);
+           $("#jsonXMLOutput").html(outputVal.value);
+           document.querySelectorAll('#jsonXMLOutput').forEach((el) => {
+               hljs.highlightElement(el);
+           }); 
+           
+            //$("#jsonXMLOutput").simpleXML({ xmlString: outputVal });
             $("#jsonXmlMessage").html('<div class="ui positive message transition successMessagebackground">Valid XML</div>');
            
         } catch (ex) {
             $("#jsonXmlMessage").html('<div class="ui negative message transition errorMessagebackground">'+ex+'</div>');
-           // console.log("Unable to process XML: " + ex);
+           //console.log("Unable to process XML: " + ex);
         }
-       
-
-    }
-        
-   
-    
+    }   
 }
 
 function clearJsonXmlMessage(){

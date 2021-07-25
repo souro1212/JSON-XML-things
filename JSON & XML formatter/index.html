@@ -12,14 +12,17 @@
         <script src="js/jquery.json-editor.min.js"></script>
         <script src="js/semantic.min.js"></script>
         <script src="js/simpleXML.js"></script>
-        <script src="js/json2xml.js"></script>
-        <script src="js/xml2json.js"></script>
+        <link rel="stylesheet" href="js/highlight/styles/dark.min.css">
+        <script src="js/highlight/highlight.js"></script>
+        <script src="js/xml2json/xml-json.js"></script>
         <link rel="stylesheet" href="css/semantic.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/simpleXML.css" />
         <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/a11y-dark.css" />
-    
+        <script src="js/highlight/languages/xml.min.js"></script>
+        <script src="js/highlight/languages/json.min.js"></script>
+
         
     </head>
     <body>
@@ -46,7 +49,7 @@
             </a>
             <a class="item convertClass highlightElement" onclick="loadYamlToJson()" onmouseover="changeCardImage(this)" onmouseout="changeImageBack(this)">
                 <img class="ui mini bottom image sidebarImage" src="pic/convert.svg" alt="XML icon">
-                <b class="sidebarText"> YAML <i class="exchange icon"></i> JSON</b>
+                <b class="sidebarText"> YAML <i class="arrow right icon"></i> JSON</b>
             </a>
             <span class="item highlightElement creditsText" onclick="openCreditsModal()">Credits</span>
           </div>

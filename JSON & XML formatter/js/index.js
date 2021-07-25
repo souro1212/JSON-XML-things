@@ -63,7 +63,7 @@ function loadJsonXmlPage(){
 
 //load SwaggerUI
 function loadSwaggerUI(){
-    $("#mainLoader").load("swaggerui.html");
+    $("#mainLoader").load("openAPISpecs.html");
 }
 
 //open credits modal
