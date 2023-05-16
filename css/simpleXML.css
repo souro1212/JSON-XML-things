@@ -1,0 +1,67 @@
+﻿.simpleXML ul
+{
+    list-style: none;
+    margin: 0px;
+    padding-left: 32px;
+}
+
+.simpleXML
+{
+    font-family: 'Courier New';
+}
+
+.simpleXML-comment
+{
+    color: #008000;
+}
+
+.simpleXML-tagHeader
+{
+    color: #8080ca;
+}
+
+.simpleXML-cdata
+{
+    color: #808080;
+}
+
+.simpleXML-tagValue
+{
+    color: #4fdee5;
+}
+
+.simpleXML-collapsedText
+{
+    color: #f8f8fc;
+}
+
+.simpleXML-attrName {
+	color: #ff8c00;
+}
+
+.simpleXML-attrValue {
+	color: #0ad161;
+}
+
+.simpleXML span.simpleXML-expander, .simpleXML span.simpleXML-expanderClose
+{
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+}
+
+.simpleXML span.simpleXML-expanderHeader
+{
+    cursor: pointer;
+}
+
+.simpleXML span.simpleXML-expander-expanded
+{
+    background-image: url( "../pic/drop-down-arrow.png" );
+}
+
+.simpleXML span.simpleXML-expander-collapsed
+{
+    background-image: url( "../pic/play-arrow.png" );
+    /*background-position-x: -12px;*/
+}
