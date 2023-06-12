@@ -14,6 +14,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'http://souradipghosh.in/JSON%20&%20XML%20formatter/'
+          target: 'https://json-xml-things.souradip.in/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
